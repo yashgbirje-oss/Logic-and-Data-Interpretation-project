@@ -19,6 +19,30 @@ def render():
     </div>
     """, unsafe_allow_html=True)
     
+    # --- GROUP MEMBERS SECTION ---
+    members = [
+        ("1", "ADAM MULANI", "251102006", "TE-AIDS-A", "54"),
+        ("2", "YASH BIRJE", "251102015", "TE-AIDS-A", "05"),
+        ("3", "ARSHIL SHAIKH", "251102013", "TE-AIDS-B", "44"),
+        ("4", "MAYANK SHINDE", "251102017", "TE-AIDS-B", "46"),
+        ("5", "ANIKET DEVLEKAR", "251102009", "TE-AIDS-A", "13"),
+    ]
+    th = "padding: 12px 14px; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: #6C63FF; border-bottom: 2px solid rgba(108,99,255,0.35);"
+    td = "padding: 12px 14px; border-bottom: 1px solid rgba(128,128,128,0.15); font-size: 0.95rem;"
+    rows = "".join(
+        f'<tr><td style="{td}">{n}</td><td style="{td} font-weight: 700;">{name}</td>'
+        f'<td style="{td}">{prn}</td><td style="{td}">{dept}</td><td style="{td}">{roll}</td></tr>'
+        for n, name, prn, dept, roll in members
+    )
+    table_html = (
+        '<div style="background: rgba(128,128,128,0.03); border: 1px solid rgba(128,128,128,0.15); border-radius: 16px; padding: 20px; margin-bottom: 2rem; overflow-x: auto;">'
+        '<h3 style="margin: 0 0 12px 0;">👥 Group Members</h3>'
+        '<table style="width: 100%; border-collapse: collapse;">'
+        f'<thead><tr><th style="{th}">Sr.</th><th style="{th}">Name</th><th style="{th}">PRN Number</th><th style="{th}">Department</th><th style="{th}">Roll Number</th></tr></thead>'
+        f'<tbody>{rows}</tbody></table></div>'
+    )
+    st.markdown(table_html, unsafe_allow_html=True)
+
     # --- STATS SECTION ---
     df = get_summary_df()
     total_attempted = df['Attempted'].sum()
