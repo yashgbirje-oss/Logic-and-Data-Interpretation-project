@@ -1,5 +1,15 @@
 # Logic & Data Interpretation Learning App
 
+## 👥 Group Members
+
+| Sr. No. | NAME | PRN Number | DEPARTMENT | ROLL NUMBER |
+|:---:|---|---|---|:---:|
+| 1 | ADAM MULANI | 251102006 | TE-AIDS-A | 54 |
+| 2 | YASH BIRJE | 251102015 | TE-AIDS-A | 05 |
+| 3 | ARSHIL SHAIKH | 251102013 | TE-AIDS-B | 44 |
+| 4 | MAYANK SHINDE | 251102017 | TE-AIDS-B | 46 |
+| 5 | ANIKET DEVLEKAR | 251102009 | TE-AIDS-A | 13 |
+
 ## Abstract
 This project is an interactive web-based educational platform designed to teach Logic and Data Interpretation. Built with Python and Streamlit, it features 8 distinct learning modules covering topics from Clock Problems to Scatter Diagram Analysis. Each module provides conceptual explanations, interactive calculators, and practice modes with auto-generated questions.
 
